@@ -1,0 +1,23 @@
+#Drone CI File
+
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+
+- name: build
+  image: golang:1.13
+  commands:
+    - "go build -o ./myapp"
+
+- name: publish  
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: rlachhman/myrepo
+    auto_tag: true
+    auto_tag_suffix: drone-build
