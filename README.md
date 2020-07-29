@@ -10,3 +10,7 @@ of the Go Lang class. The Drone.yaml is wired to drone to pick up on.
 -Main Go
 -Dockerfile
 -Drone.yaml 
+
+Make sure in the Drone.yaml to update your Docker Registry. 
+repo: rlachhman/myrepo to repo: your/repo
+
