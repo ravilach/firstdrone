@@ -11,6 +11,9 @@ of the Go Lang class. The Drone.yaml is wired to drone to pick up on.
 * Dockerfile
 * Drone.yaml 
 
+Make sure in your Drone.yaml to edit the Docker Registry to be yours. The
+example `repo: rlachhman/myrepo` should update to yours. 
+
 Below are the commands to install the [Drone Server](https://docs.drone.io/server/overview/) and [Drone Runner](https://docs.drone.io/runner/overview/)
 into Kubernetes. 
 
