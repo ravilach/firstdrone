@@ -11,9 +11,16 @@ of the Go Lang class. The Drone.yaml is wired to drone to pick up on.
 * Dockerfile
 * Drone.yaml 
 
-## Drone Docker Run
+Below are the commands to install the [Drone Server](https://docs.drone.io/server/overview/) and [Drone Runner](https://docs.drone.io/runner/overview/)
+into Kubernetes. 
+
+## Drone Docker Server Pull and Run
 
 ```
+#Pull Server
+sudo docker pull drone/drone:1
+
+#Run Server
 sudo docker run \
   --volume=/var/lib/drone:/data \
   --env=DRONE_GITHUB_CLIENT_ID=yourID \
@@ -29,8 +36,8 @@ sudo docker run \
   --name=drone \
   drone/drone:1
 ```
-## Drone Role Binding
-Save to drone_role.yaml
+## Drone Kubbernetes Runner Role Binding
+Save to drone_role.yaml then
 *kubectl apply -f drone_role.yaml*
 
 ```
@@ -78,7 +85,7 @@ roleRef:
 ```
 
 ## Drone Kubernetes Runner Deployment
-Save to drone_role.yaml
+Save to drone_deployment.yaml then
 *kubectl apply -f drone_deployment.yaml*
 
 ```
