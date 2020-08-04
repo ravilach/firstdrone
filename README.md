@@ -5,7 +5,7 @@ about the basics about [Drone](https://drone.io/) from the project site
 and the [project itself](https://github.com/drone/drone). 
 
 A simple structure of a Go Lang class and a Dockerfile to create an image
-of the Go Lang class. The Drone.yaml is wired to drone to pick up on. 
+of the Go Lang class. The Drone.yaml is wired to Drone out-of-box events.  
 
 * Main Go
 * Dockerfile
