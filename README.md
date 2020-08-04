@@ -39,7 +39,7 @@ sudo docker run \
   --name=drone \
   drone/drone:1
 ```
-## Drone Kubbernetes Runner Role Binding
+## Drone Kubernetes Runner Role Binding
 Save to drone_role.yaml then
 *kubectl apply -f drone_role.yaml*
 
