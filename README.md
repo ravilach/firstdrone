@@ -4,7 +4,10 @@ Feel free to leverage this project as your first Drone project. Can learn
 about the basics about [Drone](https://drone.io/) from the project site
 and the [project itself](https://github.com/drone/drone). 
 
-A simple structure of a Go Lang class and a Dockerfile to create an image
+A video walkthrough of the Drone Installation steps can be found on the
+Harness Blog: [Your First Drone Installation, Build, and Push](https://harness.io/2020/08/your-first-harness-ci-installation/) 
+
+This is a simple structure of a Go Lang class and a Dockerfile to create an image
 of the Go Lang class. The Drone.yaml is wired to Drone out-of-box events.  
 
 * Main Go
@@ -12,7 +15,7 @@ of the Go Lang class. The Drone.yaml is wired to Drone out-of-box events.
 * Drone.yaml 
 
 Make sure in your Drone.yaml to edit the Docker Registry to be yours. The
-example `repo: rlachhman/myrepo` should update to yours. 
+example `repo: rlachhman/myrepo` needs to be updated to yours. 
 
 Below are the commands to install the [Drone Server](https://docs.drone.io/server/overview/) and [Drone Runner](https://docs.drone.io/runner/overview/)
 into Kubernetes. 
