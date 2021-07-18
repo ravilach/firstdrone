@@ -1,16 +1,13 @@
-#Drone CI File!
-#Commit Message: Drone! Captain Canary is here! 
-
 kind: pipeline
-type: kubernetes
-name: default
+type: docker
+name: greeting
 
 steps:
-
-- name: build
-  image: golang:1.13
+- name: en
+  image: alpine
   commands:
-    - "go build -o ./myapp"
+  - echo hello world
+
 
 - name: publish  
   image: plugins/docker
@@ -19,6 +16,6 @@ steps:
       from_secret: docker_username
     password:
       from_secret: docker_password
-    repo: rlachhman/myrepo
+    repo: sunleo04/first_drone_docker_repo
     auto_tag: true
     auto_tag_suffix: drone-build
