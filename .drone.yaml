@@ -1,0 +1,21 @@
+kind: pipeline
+type: docker
+name: greeting
+
+steps:
+- name: en
+  image: alpine
+  commands:
+  - echo hello world
+
+
+- name: publish  
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: sunleo04/first_drone_docker_repo
+    auto_tag: true
+    auto_tag_suffix: drone-build
